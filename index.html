@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="title">DOM Manipulation with Forms</h1>
+      <p id="description">how to append a form with table </p>
+      <form id="form" action="/action_page.php">
+            
+        <div class="form-group">       
+        <label for="first-name" >First Name</label>
+        <input  type="text" id="first-name" required placeholder="first Name" onkeyup="handleInputChange(this);"   /><br/>
+          
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" required placeholder="last Name" onkeyup="handleInputChange(this);"  /><br/>
+          <label for="address">Address</label>
+            <textarea id="address" 
+            placeholder="address" onkeyup="handleInputChange(this);" type="input">                           
+           </textarea>              
+           <br/>   
+          <label for="state">State</label>
+          <input type="text" id="state" placeholder="state" onkeyup="handleInputChange(this);"/>
+          <br/>
+          <label for="country">Country</label>
+          <input id="country" placeholder="country" onkeyup="handleInputChange(this);"/><br/>
+          <label for="pincodes"> Pincode</label>
+          <input type="text" id="pincode" name="pincodes" required placeholder="Enter pincode"
+                  onkeyup="handleInputChange(this);" />
+          <br/>
+              
+          <label for="gender">Select Gender</label><br/>
+                <div id="genders">
+                  <label for="male">Male</label>
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    onchange="handleInputChange(this);"
+                  />
+                
+                  <label for="female">Female</label>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    onchange="handleInputChange(this);"
+                  /></div><br/>
+               
+                   
+              <label for="food">Choice of food</label><br/>
+                    <div id="foods">
+                        <label for="food1"> Uluntha Kali</label>
+                        <input  type="checkbox"
+                       id="food1"
+                        
+                        name="food"
+                        value="Uluntha Kali"
+                        onchange="handleChange(this);"
+                       
+                      />
+                   
+                        <label for="food2">Kamba Kali</label>
+                        <input  type="checkbox"
+                        id="food2"
+                        
+                        name="food"
+                        value="Kamba Kali"
+                        onchange="handleChange(this);"
+                       
+                      />
+                    
+                        <label for="food3">Millet Dosa</label>
+                        <input  type="checkbox"
+                        id="food3"
+                       
+                        name="food"
+                        value="Millet Dosa"
+                        onchange="handleChange(this);"
+                       
+                      />
+                   
+                        <label for="food4">Ragi Kali</label>
+                        <input
+                        type="checkbox"
+                        id="food4"
+                        
+                        name="food"
+                        value="Ragi Kali"
+                        onchange="handleChange(this);"
+                       
+                      />
+                    
+                        <label for="food5"> Millet Briyani</label>
+                        <input
+                        type="checkbox"
+                        id="food5"
+                        name="food"
+                        value="Millet Briyani"
+                        onchange="handleChange(this);"
+                       
+                      />                 
+                    </div>
+                       <button type="reset"  class="btn btn-success" id="submit"  onclick= "handleSubmit(this); ">Submit</button>
+                </div>     
+          </form>
+                   
+           
+            <script src="./script.js"></script>
+            <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
